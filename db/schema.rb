@@ -13,11 +13,11 @@
 ActiveRecord::Schema.define(version: 20170521210838) do
 
   create_table "contacts", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "comments"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "nombre"
+    t.string   "correo"
+    t.text     "comentarios"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

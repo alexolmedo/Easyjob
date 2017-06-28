@@ -6,18 +6,18 @@
       <div class="well">
         <%= form_for @contact do |f| %>
           <div class="form-group">
-            <%= f.label :name %>
-            <%= f.text_field :name, class: 'form-control' %>
+            <%= f.label :nombre %>
+            <%= f.text_field :nombre, class: 'form-control' %>
           </div>
             
           <div class="form-group">
-            <%= f.label :email %>
-            <%= f.text_field :email, class: 'form-control' %>
+            <%= f.label :correo %>
+            <%= f.text_field :correo, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :comments %>
-            <%= f.text_area :comments, class: 'form-control' %>
+            <%= f.label :comentarios %>
+            <%= f.text_area :comentarios, class: 'form-control' %>
           </div>
       
           <%= f.submit 'Enviar', class: 'btn btn-default' %>
