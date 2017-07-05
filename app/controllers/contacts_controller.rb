@@ -7,6 +7,8 @@ class ContactsController < ApplicationController
     end
     
     
+    
+    
     # Makes a POST request in /contacts
     # This is how you create objects by default
     def create
