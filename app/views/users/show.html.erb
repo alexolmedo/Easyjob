@@ -10,14 +10,14 @@
       <h3><span class="job-icon"><%= job_title_icon %></span> <%= @user.profile.job_title %><br></h3>
       
       <div class="well profile-block profile-desc">
-        <h3>Description</h3>
+        <h3>Descripción</h3>
         <%= @user.profile.description %>
       </div>
       
       <!-- Show of the following things if the user has a pro plan -->
       <% if current_user.plan_id == 2 %>
         <div class="well profile-block profile-contact">
-          <h3>Contact Info</h3>
+          <h3>Información de contacto</h3>
           <%= @user.profile.phone_number %><br>
           <%= @user.profile.contact_email %><br>
         </div>
