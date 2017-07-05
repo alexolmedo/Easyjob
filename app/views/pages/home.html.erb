@@ -44,17 +44,17 @@
           <br>
           
           <!-- Using Query string parameters, we can pass info via URL -->
-          <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+          <%= link_to "Registro Básico", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
         </div>
       </div>
       
       <!-- Pro Membership -->
       <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">Membresía Avanzada</h2>
+          <h2 class="text-center">Membresía Premium</h2>
           <h4 class="text-center">Consigue acceso total a la comunidad de empresarios y estudiantes de la EPN po solo $1/mes!</h4>
           <br>
-          <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+          <%= link_to "Registro Premium", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
         </div>
       </div>
     
