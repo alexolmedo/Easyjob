@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h2 class="text-center">Edit My Account</h2>
+      <h2 class="text-center">Editar mi Cuenta</h2>
       
       <div class="well">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -36,13 +36,13 @@
           </div>
         
           <div class="actions form-group">
-            <%= f.submit "Update", class: 'btn btn-primary' %>
+            <%= f.submit "Actualizar", class: 'btn btn-primary' %>
           </div>
         <% end %>
         
-        <h3>Cancel my account</h3>
-        <p><i>You can only do this once</i></p>
-        <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %>
+        <h3>Cancelar mi cuenta</h3>
+        <p><i>Solo puedes hacer esto una vez</i></p>
+        <%= button_to "Cancelar mi Cuenta", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %>
       </div>
       
     </div>
