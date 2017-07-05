@@ -57,8 +57,8 @@
 
             <!-- Linking pages the Rails way -->
             <!-- The about_path allows us to have more flexability in the routes file in terms of direction -->
-            <li><%= link_to "Contáctanos", about_path %></li>
-            <li><%= link_to "Contact Us", new_contact_path %></li>
+            <li><%= link_to "Acerca De", about_path %></li>
+            <li><%= link_to "Contáctanos", new_contact_path %></li>
             
             <% if user_signed_in? %>
               <li><%= link_to "Comunidad", users_path %></li>
