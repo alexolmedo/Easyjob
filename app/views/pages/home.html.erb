@@ -12,14 +12,14 @@
       <!-- User Profile Options -->
       <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">Your Profile</h2>
+          <h2 class="text-center">Tu Perfil</h2>
           
           <!-- If the user has created a profile -->
           <% if current_user.profile %>
             <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-info btn-lg btn-block' %>
             <%= link_to "View your profile", user_path(id: current_user.id), class: 'btn btn-success btn-lg btn-block' %>
           <% else %>
-            <p class="text-center">Create your profile so you can share your information to the community</p>
+            <p class="text-center">Crea tu perfil para que puedas compartir tu información con la comunidad</p>
             <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id), class: 'btn btn-success btn-lg btn-block' %>
           <% end %>
           
@@ -29,8 +29,8 @@
       <!-- View the Community -->
       <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">The Community</h2>
-          <p class="text-center">Vist the community to meet other developers, investors, and entrepreneurs!</p>
+          <h2 class="text-center">La Comunidad</h2>
+          <p class="text-center">Visita la comunidad para conocer otros estudiantes de la EPN y otros empresarios!</p>
           <%= link_to "Vist the community", users_path, class: 'btn btn-primary btn-lg btn-block' %>
         </div>
       </div>
@@ -39,8 +39,8 @@
       <!-- Basic Membership -->
       <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">Basic Membership</h2>
-          <h4 class="text-center">Sign up for free and get basic access to the community.</h4>
+          <h2 class="text-center">Membresía Básica</h2>
+          <h4 class="text-center">Regístrate gratis y consigue un acceso básico a la comunidad de estudiantes y empresarios</h4>
           <br>
           
           <!-- Using Query string parameters, we can pass info via URL -->
@@ -51,8 +51,8 @@
       <!-- Pro Membership -->
       <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">Pro Membership</h2>
-          <h4 class="text-center">Get access to the community and contact info for only $1/month!</h4>
+          <h2 class="text-center">Membresía Avanzada</h2>
+          <h4 class="text-center">Consigue acceso total a la comunidad de empresarios y estudiantes de la EPN po solo $1/mes!</h4>
           <br>
           <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
         </div>
