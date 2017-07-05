@@ -16,11 +16,11 @@
           
           <!-- If the user has created a profile -->
           <% if current_user.profile %>
-            <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-info btn-lg btn-block' %>
-            <%= link_to "View your profile", user_path(id: current_user.id), class: 'btn btn-success btn-lg btn-block' %>
+            <%= link_to "Editar tu perfil", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-info btn-lg btn-block' %>
+            <%= link_to "Ver tu perfil", user_path(id: current_user.id), class: 'btn btn-success btn-lg btn-block' %>
           <% else %>
             <p class="text-center">Crea tu perfil para que puedas compartir tu información con la comunidad</p>
-            <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id), class: 'btn btn-success btn-lg btn-block' %>
+            <%= link_to "Crear tu perfil!", new_user_profile_path(user_id: current_user.id), class: 'btn btn-success btn-lg btn-block' %>
           <% end %>
           
         </div>
@@ -31,7 +31,7 @@
         <div class="well">
           <h2 class="text-center">La Comunidad</h2>
           <p class="text-center">Visita la comunidad para conocer otros estudiantes de la EPN y otros empresarios!</p>
-          <%= link_to "Vist the community", users_path, class: 'btn btn-primary btn-lg btn-block' %>
+          <%= link_to "Visitar la comunidad", users_path, class: 'btn btn-primary btn-lg btn-block' %>
         </div>
       </div>
     
