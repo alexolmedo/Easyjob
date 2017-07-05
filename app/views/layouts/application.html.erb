@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DevMatch</title>
+    <title>Easyjob</title>
     
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
@@ -37,7 +37,7 @@
           <!-- Links to Homepage -->
           <%= link_to root_path, class: "navbar-brand" do %>
             <i class="fa fa-group"></i>
-            DevMatch
+            EasyJob
           <% end %>
         </div>
         
@@ -57,12 +57,12 @@
 
             <!-- Linking pages the Rails way -->
             <!-- The about_path allows us to have more flexability in the routes file in terms of direction -->
-            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "Contáctanos", about_path %></li>
             <li><%= link_to "Contact Us", new_contact_path %></li>
             
             <% if user_signed_in? %>
-              <li><%= link_to "Community", users_path %></li>
-              <li><%= link_to "My Account", edit_user_registration_path %></li>
+              <li><%= link_to "Comunidad", users_path %></li>
+              <li><%= link_to "Mi cuenta", edit_user_registration_path %></li>
             <% end %>
             
           </ul>
