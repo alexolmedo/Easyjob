@@ -10,6 +10,12 @@ class CreateProfiles < ActiveRecord::Migration[5.0]
       t.string :phone_number
       t.string :contact_email
       t.text :description
+      t.text :facultad
+      t.text :carrera
+      t.string :semestre
+      t.text :habilidades
+      t.text :idiomas
+      t.text :ubicacion
       t.timestamps
       
     end

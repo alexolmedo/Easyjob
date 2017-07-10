@@ -36,9 +36,40 @@
   </div>
   
   <div class="form-group">
-    <!--<%= f.label :description %>-->
-    <label for="description">Descripción</label>
-    <%= f.text_area :description, class: 'form-control' %>
+    <!--<%= f.label :facultad %>-->
+    <label for="facultad">Facultad</label>
+    <%= f.select :facultad, ['Facultad de Sistemas', 'Facultad Eléctrica y Electrónica', 'Facultad de Ciencias', 'Facultad de Ciencias Administrativas', 'Facultad de Ingeniería Civil Y Ambiental',
+    'Facultad de Geología y Petroleos', 'Facultad de Mecánica', 'Facultad de Quimica y Agroindustrial', 'ESFOT'], {}, class: 'form-control' %>
+  </div>
+  
+   <div class="form-group">
+    <!--<%= f.label :carrera %>-->
+    <label for="carrera">Carrera</label>
+    <%= f.text_area :carrera, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <!--<%= f.label :semestre %>-->
+    <label for="semestre">Semestre</label>
+    <%= f.select :semestre, ['Primero', 'Segundo', 'Tercero', 'Cuarto', 'Quinto', 'Sexto', 'Septimo', 'Octavo', 'Noveno', 'Decimo'], {}, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <!--<%= f.label :habilidades %>-->
+    <label for="habilidades">Habilidades</label>
+    <%= f.text_area :habilidades, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <!--<%= f.label :idiomas %>-->
+    <label for="idiomas">Idiomas</label>
+    <%= f.text_area :idiomas, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <!--<%= f.label :ubicacion %>-->
+    <label for="ubicacion">Ubicación</label>
+    <%= f.text_area :ubicacion, class: 'form-control' %>
   </div>
   
   <div class="form-group">

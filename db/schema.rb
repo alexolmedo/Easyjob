@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(version: 20170114235950) do
     t.string   "phone_number"
     t.string   "contact_email"
     t.text     "description"
+    t.text     "facultad"
+    t.text     "carrera"
+    t.string   "semestre"
+    t.text     "habilidades"
+    t.text     "idiomas"
+    t.text     "ubicacion"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.string   "avatar_file_name"
