@@ -10,8 +10,28 @@
       <h3><span class="job-icon"><%= job_title_icon %></span> <%= @user.profile.job_title %><br></h3>
       
       <div class="well profile-block profile-desc">
-        <h3>Descripción</h3>
-        <%= @user.profile.description %>
+        <h3>Información Personal</h3>
+        <%= "Teléfono: " + @user.profile.phone_number %>
+        <br />
+        <%= "Correo: " + @user.profile.contact_email %>
+        <br />
+        <%= "Ubicación: " + @user.profile.ubicacion %>
+      </div>
+      
+      <div class="well profile-block profile-desc">
+        <h3>Información Académica</h3>
+        <%= "Facultad: " + @user.profile.facultad %>
+        <br />
+        <%= "Carrera: " + @user.profile.carrera %>
+        <br />
+        <%= "Semestre: " + @user.profile.semestre %>
+      </div>
+      
+      <div class="well profile-block profile-desc">
+        <h3>Conocimientos</h3>
+        <%= "Habilidades: " + @user.profile.habilidades %>
+        <br />
+        <%= "Idiomas: " + @user.profile.idiomas %>
       </div>
       
       <!-- Show of the following things if the user has a pro plan -->
