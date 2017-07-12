@@ -37,26 +37,27 @@
     
     <% else %>
       <!-- Basic Membership -->
-      <div class="container">
+      <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">Membresía Básica</h2>
-          <h4 class="text-center">Regístrate gratis y consigue un acceso básico a la comunidad de estudiantes y empresarios</h4>
+          <h2 class="text-center">Membresía para Estudiantes</h2>
+          <h4 class="text-center">Regístrate gratis y consigue un acceso a una variedad de oportunidades de trabajo y pasantías</h4>
           <br>
           
           <!-- Using Query string parameters, we can pass info via URL -->
-          <%= link_to "Registro Básico", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+          <%= link_to "Registro Estudiantes", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
         </div>
       </div>
       
       <!-- Pro Membership -->
-      <!--<div class="col-md-6">
+      <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">Membresía Premium</h2>
-          <h4 class="text-center">Consigue acceso total a la comunidad de empresarios y estudiantes de la EPN po solo $1/mes!</h4>
+          <h2 class="text-center">Membresía para Emprendedores</h2>
+          <h4 class="text-center">Consigue acceso total a la comunidad de estudiantes calificados para resolver las necesidades de tu empresa</h4>
           <br>
-          <%= link_to "Registro Premium", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+          <a class="btn btn-success btn-lg btn-block" >Registro Emprendedores</a>
+          <!--<%= link_to "Registro Emprendedores", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>-->
         </div>
-      </div>-->
+      </div>
     
     <% end %>
     
