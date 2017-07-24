@@ -9,41 +9,66 @@
       <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
       <h3><span class="job-icon"><%= job_title_icon %></span> <%= @user.profile.job_title %><br></h3>
       
-      <div class="well profile-block profile-desc">
-        <h3>Información Personal</h3>
-        <%= "Teléfono: " + @user.profile.phone_number %>
-        <br />
-        <%= "Correo: " + @user.profile.contact_email %>
-        <br />
-        <%= "Ubicación: " + @user.profile.ubicacion %>
-      </div>
+      <!--------------------------------------------- Perfil para estudiantes ------------------------------------------->
+      <% if @user.plan_id == 1 %>
       
-      <div class="well profile-block profile-desc">
-        <h3>Información Académica</h3>
-        <%= "Facultad: " + @user.profile.facultad %>
-        <br />
-        <%= "Carrera: " + @user.profile.carrera %>
-        <br />
-        <%= "Semestre: " + @user.profile.semestre %>
-      </div>
-      
-      <div class="well profile-block profile-desc">
-        <h3>Conocimientos</h3>
-        <%= "Habilidades: " + @user.profile.habilidades %>
-        <br />
-        <%= "Idiomas: " + @user.profile.idiomas %>
-      </div>
-      
-      <!-- Show of the following things if the user has a pro plan -->
-      <% if current_user.plan_id == 2 %>
-        <div class="well profile-block profile-contact">
-          <h3>Información de contacto</h3>
-          <%= @user.profile.phone_number %><br>
-          <%= @user.profile.contact_email %><br>
+          <div class="well profile-block profile-desc">
+          <h3>Información Personal</h3>
+          
+          <!-- Mostrar información de contacto solo a empresarios -->
+          <% if current_user.plan_id == 2 %>
+            <%= "Teléfono: " + @user.profile.phone_number %>
+            <br />
+            <%= "Correo: " + @user.profile.contact_email %>
+            <br />
+          <% end %>
+          
+          <%= "Ubicación: " + @user.profile.ubicacion %>
+        </div>
+        
+        <div class="well profile-block profile-desc">
+          <h3>Información Académica</h3>
+          <%= "Facultad: " + @user.profile.facultad %>
+          <br />
+          <%= "Carrera: " + @user.profile.carrera %>
+          <br />
+          <%= "Semestre: " + @user.profile.semestre %>
+        </div>
+        
+        <div class="well profile-block profile-desc">
+          <h3>Conocimientos</h3>
+          <%= "Habilidades: " + @user.profile.habilidades %>
+          <br />
+          <%= "Idiomas: " + @user.profile.idiomas %>
+        </div>
+
+      <!--------------------------------------------- Perfil para emprendedores ------------------------------------------->  
+      <% else %>
+        <div class="well profile-block profile-desc">
+          <h3>Información Personal</h3>
+          <%= "Teléfono: " + @user.profile.phone_number %>
+          <br />
+          <%= "Correo: " + @user.profile.contact_email %>
+          <br />
+          <%= "Ubicación: " + @user.profile.ubicacion %>
+        </div>
+        
+        <div class="well profile-block profile-desc">
+          <h3>Información Empresarial</h3>
+          <%= "Empresa: " + @user.profile.facultad %>
+          <br />
+          <%= "Cargo: " + @user.profile.carrera %>
+          <br />
+          <%= "Sector: " + @user.profile.semestre %>
+        </div>
+        
+        <div class="well profile-block profile-desc">
+          <h3>Información Profesional</h3>
+          <%= "Habilidades Requeridas: " + @user.profile.habilidades %>
+          <br />
+          <%= "Idiomas Requeridos: " + @user.profile.idiomas %>
         </div>
       <% end %>
-      
     </div>
-    
   </div>
 </div>
